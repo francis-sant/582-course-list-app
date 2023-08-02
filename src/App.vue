@@ -1,15 +1,29 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+  <p>{{ count }}</p>
+  <CourseItem @countTparent="addOne" />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+import CourseItem from "./components/CourseItem.vue";
 
 export default {
   name: "App",
+  data() {
+    return {
+      count: 0,
+    };
+  },
   components: {
-    HelloWorld,
+    // HelloWorld,
+    CourseItem,
+  },
+  methods: {
+    addOne() {
+      this.count++;
+    },
   },
 };
 </script>
