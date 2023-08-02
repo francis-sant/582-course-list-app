@@ -1,0 +1,9 @@
+diff a/src/App.vue b/src/App.vue	(rejected hunks)
+@@ -2,6 +2,7 @@
+   <img alt="Vue logo" src="./assets/logo.png" />
+   <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+   <p>{{ count }}</p>
++  <CourseItem @countTparent="addOne" />
+ </template>
+ 
+ <script>
