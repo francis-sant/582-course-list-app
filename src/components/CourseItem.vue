@@ -95,7 +95,7 @@ div {
 
 .class-selected {
   background-color: #41b883;
-  color: #1041ff;
+  color: #10088b;
   border-radius: 10px;
 }
 
