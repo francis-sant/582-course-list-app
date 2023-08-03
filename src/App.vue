@@ -2,18 +2,19 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <h2>Course Name</h2>
   <h3>Courses Selected: {{ count }}</h3>
-
-  <CourseItem
-    v-for="course in courses"
-    :course="course"
-    :key="course.id"
-    @count-to-parent="addOne"
-  >
-  </CourseItem>
+  <div class="courses">
+    <CourseItem
+      v-for="course in courses"
+      :course="course"
+      :key="course.id"
+      @count-to-parent="addOne"
+      @remove-from-parent="removeOne"
+    >
+    </CourseItem>
+  </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import CourseItem from "./components/CourseItem.vue";
 
 export default {
@@ -28,7 +29,7 @@ export default {
           id: 1,
           description: "Winter Course",
           hours: 25,
-          full: false,
+          spaces: 20,
           location: "online",
           instructor: "John Doe",
         },
@@ -38,8 +39,8 @@ export default {
           id: 2,
           description: "Winter Course",
           hours: 30,
-          location: "online",
-          full: false,
+          location: "Saint Laurent Campus",
+          spaces: 14,
           instructor: "Jane from the block",
         },
         {
@@ -48,8 +49,8 @@ export default {
           id: 3,
           description: "Winter Course",
           hours: 35,
-          location: "online",
-          full: false,
+          location: "Downtown Campus",
+          spaces: 0,
           instructor: "Marie Curie",
         },
         {
@@ -59,7 +60,7 @@ export default {
           description: "Winter Course",
           hours: 40,
           location: "online",
-          full: false,
+          spaces: 10,
           instructor: "Barbara McClintock",
         },
       ],
@@ -71,6 +72,9 @@ export default {
   methods: {
     addOne() {
       this.count++;
+    },
+    removeOne() {
+      this.count--;
     },
   },
 };
@@ -84,5 +88,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.courses {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>
