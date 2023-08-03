@@ -134,7 +134,10 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
-  justify-items: center;
   align-items: center;
+  max-width: -moz-fit-content;
+  width: 1024px;
+  margin: auto;
+  max-width: 100%;
 }
 </style>

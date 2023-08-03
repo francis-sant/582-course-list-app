@@ -11,8 +11,10 @@
       <!-- <button>Add Item</button> -->
       <!-- <button @click="innerAdd">Add Item</button> -->
       <!-- <button @click="outerAdd">Add outside</button> -->
-
-      <div v-if="!classFull && course.spaces < 20">
+      <div v-if="course.spaces >= 20">
+        <div class="class-disabled">Course Already Full</div>
+      </div>
+      <div v-else-if="!classFull && course.spaces < 20">
         <button @click="addClass">Add Item</button>
       </div>
       <div v-else-if="course.spaces < 20 && course.spaces >= 0">
@@ -93,6 +95,7 @@ div {
   border-radius: 10px;
   height: 300px;
   padding: 20px;
+  max-height: 100%;
 }
 
 .class-selected {
@@ -102,9 +105,10 @@ div {
 }
 
 .class-disabled {
-  background-color: #f5f5f5;
-  color: #c4c4c4;
+  background-color: #cf3e3e;
+  color: #fafafa;
   font-weight: bold;
   border-radius: 10px;
+  padding: 7px;
 }
 </style>
