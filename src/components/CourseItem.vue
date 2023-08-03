@@ -85,11 +85,6 @@ div {
   margin-bottom: 1rem;
 }
 
-.class-selected {
-  background-color: #41b883;
-  color: #1041ff;
-  border-radius: 10px;
-}
 .classes {
   border: 3px solid rgb(35, 46, 139);
   text-align: center;
@@ -98,7 +93,12 @@ div {
   border-radius: 10px;
   height: 300px;
   padding: 20px;
-  background-color: #d0ffe7;
+}
+
+.class-selected {
+  background-color: #41b883;
+  color: #1041ff;
+  border-radius: 10px;
 }
 
 .class-disabled {
