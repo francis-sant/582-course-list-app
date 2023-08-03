@@ -8,9 +8,7 @@
       <div>Credits: {{ course.credit }}</div>
       <div>Location: {{ course.location }}</div>
       <div>Available Spots: {{ course.spaces + count }} /20</div>
-      <!-- <button>Add Item</button> -->
-      <!-- <button @click="innerAdd">Add Item</button> -->
-      <!-- <button @click="outerAdd">Add outside</button> -->
+
       <div v-if="course.spaces >= 20">
         <div class="class-disabled">Course Already Full</div>
       </div>
@@ -47,9 +45,6 @@ export default {
       this.count++;
       this.classFull = true;
     },
-    // outerAdd() {
-    //   this.$emit("count-to-parent");
-    // },
     removeClass() {
       this.$emit("remove-from-parent");
       this.count--;
