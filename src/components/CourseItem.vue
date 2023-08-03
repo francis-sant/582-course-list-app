@@ -85,20 +85,20 @@ div {
   margin-bottom: 1rem;
 }
 
+.class-selected {
+  background-color: #41b883;
+  color: #1041ff;
+  border-radius: 10px;
+}
 .classes {
   border: 3px solid rgb(35, 46, 139);
   text-align: center;
+  font-weight: bold;
   margin: auto;
   border-radius: 10px;
   height: 300px;
   padding: 20px;
-}
-
-.class-selected {
-  background-color: #41b883;
-  color: #264c75;
-  font-weight: bold;
-  border-radius: 10px;
+  background-color: #d0ffe7;
 }
 
 .class-disabled {

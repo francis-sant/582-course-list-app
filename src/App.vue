@@ -63,6 +63,46 @@ export default {
           spaces: 10,
           instructor: "Barbara McClintock",
         },
+        {
+          name: "UX Design",
+          credit: "50",
+          id: 4,
+          description: "Leardn UX-UI principles",
+          hours: 40,
+          location: "Vanier I Campus",
+          spaces: 10,
+          instructor: "Barbara Mctoshi",
+        },
+        {
+          name: "Introduction to Graphic Design",
+          credit: "50",
+          id: 10,
+          description: "Learn the basics of graphic design",
+          hours: 20,
+          location: "Downtown Campus",
+          spaces: 22,
+          instructor: "Paul Rand",
+        },
+        {
+          name: "Introduction to Web Design",
+          credit: "50",
+          id: 11,
+          description: "Learn the basics of web design",
+          hours: 20,
+          location: "Downtown Campus",
+          spaces: 7,
+          instructor: "Paul Rand",
+        },
+        {
+          name: "Data Science and Analytics",
+          credit: "50",
+          id: 9,
+          description: "Explore data science and analytics tools",
+          hours: 45,
+          location: "Online",
+          spaces: 20,
+          instructor: "Ada Lovelace",
+        },
       ],
     };
   },
@@ -91,9 +131,10 @@ export default {
 }
 
 .courses {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
   justify-items: center;
   align-items: center;
-  justify-content: space-around;
 }
 </style>
