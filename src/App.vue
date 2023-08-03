@@ -100,7 +100,7 @@ export default {
           description: "Explore data science and analytics tools",
           hours: 45,
           location: "Online",
-          spaces: 20,
+          spaces: 19,
           instructor: "Ada Lovelace",
         },
       ],

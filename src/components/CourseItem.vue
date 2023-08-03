@@ -41,12 +41,14 @@ export default {
 
   methods: {
     addClass() {
-      this.$emit("count-to-parent");
+      // console.log(this.course.id);
+      this.$emit("count-to-parent", this.course.id);
       this.count++;
       this.classFull = true;
     },
     removeClass() {
-      this.$emit("remove-from-parent");
+      // console.log(this.course.id);
+      this.$emit("remove-from-parent", this.course.id);
       this.count--;
       this.classFull = false;
     },
